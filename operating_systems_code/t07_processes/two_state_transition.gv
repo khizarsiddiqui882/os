@@ -1,0 +1,11 @@
+digraph G {
+
+	running [fillcolor=lawngreen, style="filled"];
+	ready [fillcolor=gold, style="filled"];
+	init, zombie [fillcolor=plum1, style="filled"];
+
+    running -> ready [label="descheduled"];
+    ready -> running [label="scheduled"];
+    init -> running [label="enters main()"];
+    running -> zombie [label="completes"];
+}
